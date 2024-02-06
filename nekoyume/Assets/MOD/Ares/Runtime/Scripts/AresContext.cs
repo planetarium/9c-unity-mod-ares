@@ -11,6 +11,7 @@ using Nekoyume.Model.EnumType;
 using Nekoyume.Model.State;
 using Nekoyume.State;
 using Nekoyume.TableData;
+using Nekoyume.UI;
 using Nekoyume.UI.Model;
 using NineChronicles.MOD.Ares.UI;
 using NineChronicles.MOD.Extensions;
@@ -21,7 +22,7 @@ namespace NineChronicles.MOD.Ares
 {
     public class AresContext
     {
-        #region Bridge
+        #region Bridge Getters
         public IAgent Agent => Game.instance.Agent;
         public long BlockIndex => Game.instance.Agent.BlockIndex;
         public Dictionary<Type, (Address address, ISheet sheet)> Sheets =>
@@ -43,12 +44,13 @@ namespace NineChronicles.MOD.Ares
             States.Instance?.CurrentRuneSlotStates?[BattleType.Arena];
         public List<ArenaParticipantModel> ArenaParticipants =>
             RxProps.ArenaInformationOrderedWithScore?.Value;
-        #endregion Bridge
+        #endregion Bridge Getters
 
         #region UI
         public IUI CurrentUI { get; set; }
         public int ArenaScoreBoardPage { get; set; }
         public readonly Dictionary<Address, (bool inProgress, float winRate)?> WinRates = new();
+        public event Action OnChoiceEnemy;
         #endregion UI
 
         public void Track(string eventName)
@@ -81,6 +83,7 @@ namespace NineChronicles.MOD.Ares
                 return tuple;
             }
 
+            WinRates[enemyAvatarAddress] = (true, 0);
             var runeStates = await Agent.GetRuneStatesAsync(
                     SelectedAvatarAddress.Value,
                     runeSlotInfos: SelectedRuneSlotStatesForArena.GetEquippedRuneSlotInfos());
@@ -112,6 +115,39 @@ namespace NineChronicles.MOD.Ares
             tuple = (false, winRate);
             WinRates[enemyAvatarAddress] = tuple;
             return tuple;
+        }
+
+        public void ChoiceEnemy(Address avatarAddress)
+        {
+            OnChoiceEnemy?.Invoke();
+            var index = ArenaParticipants.FindIndex(e => e.AvatarAddr == avatarAddress);
+            if (!Widget.TryFind<ArenaBoard>(out var arenaBoardWidget))
+            {
+                return;
+            }
+
+            if (arenaBoardWidget.IsActive())
+            {
+                arenaBoardWidget.Close();
+            }
+
+            if (!Widget.TryFind<ArenaBattlePreparation>(out var arenaBattlePreparationWidget))
+            {
+                return;
+            }
+
+            if (!TableSheets.Instance.ArenaSheet.TryGetCurrentRound(
+                    Agent.BlockIndex,
+                    out var currentRoundData))
+            {
+                return;
+            }
+            
+            var data = ArenaParticipants[index];
+            arenaBattlePreparationWidget.Show(
+                currentRoundData,
+                data,
+                data.Cp);
         }
     }
 }

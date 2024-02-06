@@ -9,8 +9,6 @@ namespace NineChronicles.MOD.Ares.UI
         private readonly AresContext _aresContext;
         private readonly VisualElement _ui;
 
-        public VisualElement UI => _ui;
-
         public SelectAvatar(VisualElement root, AresContext aresContext)
         {
             _aresContext = aresContext;

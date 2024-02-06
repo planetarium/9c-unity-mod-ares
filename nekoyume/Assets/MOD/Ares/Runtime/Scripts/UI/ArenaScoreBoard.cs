@@ -9,11 +9,10 @@ namespace NineChronicles.MOD.Ares.UI
         private readonly ArenaScoreBoard_AvatarCell[] _avatarCells;
         private readonly AresContext _aresContext;
 
-        public VisualElement UI => _ui;
-
         public ArenaScoreBoard(VisualElement root, AresContext aresContext)
         {
             _aresContext = aresContext;
+            _aresContext.OnChoiceEnemy += Hide;
 
             _ui = root;
             _ui.Q<Button>("arena-score-board__previous-button")

@@ -88,13 +88,13 @@ namespace NineChronicles.MOD.Ares
             _aresContext.CurrentUI.Show();
         }
 
-        private void Update()
-        {
-            if (_aresContext.CurrentUI == _arenaScoreboard)
-            {
-                _arenaScoreboard.UI.Q<Label>("arena-score-board__current-block-index").text =
-                    $"Current: {_aresContext.BlockIndex}";
-            }
-        }
+        // private void Update()
+        // {
+        //     if (_aresContext.CurrentUI == _arenaScoreboard)
+        //     {
+        //         _arenaScoreboard.UI.Q<Label>("arena-score-board__current-block-index").text =
+        //             $"Current: {_aresContext.BlockIndex}";
+        //     }
+        // }
     }
 }
