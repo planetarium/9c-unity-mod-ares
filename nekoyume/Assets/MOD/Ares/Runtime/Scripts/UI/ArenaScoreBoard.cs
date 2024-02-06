@@ -1,4 +1,5 @@
 using NineChronicles.MOD.Ares.UI.VisualTreeAssets;
+using UnityEngine;
 using UnityEngine.UIElements;
 
 namespace NineChronicles.MOD.Ares.UI
@@ -17,6 +18,9 @@ namespace NineChronicles.MOD.Ares.UI
             _ui = root;
             _ui.Q<Button>("arena-score-board__previous-button")
                 .RegisterCallback<ClickEvent>(ev => Hide());
+            _ui.Q<Button>("arena-score-board__copy-agent-address-button")
+                .RegisterCallback<ClickEvent>(ev =>
+                    GUIUtility.systemCopyBuffer = _aresContext.AgentAddress?.ToString());
             _ui.Q<Button>("arena-score-board__previous-page-button")
                 .RegisterCallback<ClickEvent>(ev =>
                     {
@@ -43,10 +47,12 @@ namespace NineChronicles.MOD.Ares.UI
 
         public void Show()
         {
-            _ui.Q<Label>("arena-score-board__agent-address").text =
-                _aresContext.AgentAddress?.ToString()[..10] ?? "Empty";
-            _ui.Q<Label>("arena-score-board__avatar-nickname").text =
-                _aresContext.SelectedAvatarAddress?.ToString()[..10] ?? "Empty";
+            _ui.Q<Label>("arena-score-board__agent-address").text = _aresContext.AgentAddress is null
+                ? "Empty"
+                : $"{_aresContext.AgentAddress.ToString()[..10]}...";
+            _ui.Q<Label>("arena-score-board__avatar-nickname").text = _aresContext.SelectedAvatarAddress is null
+                ? "Empty"
+                : $"{_aresContext.SelectedAvatarAddress.ToString()[..10]}...";
 
             const int cellCountPerPage = 14;
             var startIndex = (_aresContext.ArenaScoreBoardPage - 1) * cellCountPerPage;
