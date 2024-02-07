@@ -39,15 +39,15 @@ When you are viewing the Arena Board, as shown in this image, press Ctrl(Cmd)+Al
 # How to apply to the NineChronicles Unity project
 
 This mode can be added as a Unity package.
-Add the mod package to your NineChronicles project's manifest.json file as shown below.
+Add the mod packages to your NineChronicles project's manifest.json file as shown below.
 
 - Path: `/nekoyume/Packages/manifest.json`
 
 ```json
 {
   "dependencies": {
-    "com.planetariumlabs.9c-unity-mod-ares": "https://github.com/planetarium/9c-unity-mod-ares.git?path=/nekoyume/Assets/MOD/Ares#9c-unity-mod-ares",
-    "com.planetariumlabs.9c-unity-mod-core": "https://github.com/planetarium/9c-unity-mod-ares.git?path=/nekoyume/Assets/MOD/Core#9c-unity-mod-core"
+    "com.planetariumlabs.9c-unity-mod-ares": "https://github.com/planetarium/9c-unity-mod-ares.git?path=/nekoyume/Assets/MOD/Ares#develop-mod",
+    "com.planetariumlabs.9c-unity-mod-core": "https://github.com/planetarium/9c-unity-mod-ares.git?path=/nekoyume/Assets/MOD/Core#develop-mod"
   }
 }
 ```
