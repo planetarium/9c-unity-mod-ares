@@ -1,6 +1,6 @@
 using System;
 
-namespace NineChronicles.MOD
+namespace NineChronicles.MOD.Core
 {
     public class ModAttribute : Attribute
     {

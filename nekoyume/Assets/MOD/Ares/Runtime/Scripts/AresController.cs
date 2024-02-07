@@ -1,4 +1,4 @@
-using NineChronicles.MOD.Ares.UI;
+using NineChronicles.MOD.Core;
 using UnityEngine;
 
 namespace NineChronicles.MOD.Ares

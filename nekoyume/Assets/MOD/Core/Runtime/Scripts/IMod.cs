@@ -1,4 +1,4 @@
-namespace NineChronicles.MOD
+namespace NineChronicles.MOD.Core
 {
     public interface IMod
     {

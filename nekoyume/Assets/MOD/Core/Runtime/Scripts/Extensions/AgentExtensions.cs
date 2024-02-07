@@ -8,7 +8,7 @@ using Nekoyume.Blockchain;
 using Nekoyume.Model.EnumType;
 using Nekoyume.Model.State;
 
-namespace NineChronicles.MOD
+namespace NineChronicles.MOD.Core.Extensions
 {
     public static class AgentExtensions
     {

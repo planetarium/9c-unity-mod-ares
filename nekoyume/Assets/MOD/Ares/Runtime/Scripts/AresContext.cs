@@ -14,7 +14,7 @@ using Nekoyume.TableData;
 using Nekoyume.UI;
 using Nekoyume.UI.Model;
 using NineChronicles.MOD.Ares.UI;
-using NineChronicles.MOD.Extensions;
+using NineChronicles.MOD.Core.Extensions;
 using UnityEngine;
 using Debug = UnityEngine.Debug;
 
