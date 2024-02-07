@@ -4,7 +4,9 @@
     "displayName": "NineChronicles Mod Ares",
     "description": "This is a mod project used by the Unity client for Nine Chronicles.",
     "unity": "2021.3",
-    "dependencies": {},
+    "dependencies": {
+        "com.planetariumlabs.9c-unity-mod-core": "0.1.0"
+    },
     "keywords": [
         "planetariumlabs",
         "ninechronicles",
