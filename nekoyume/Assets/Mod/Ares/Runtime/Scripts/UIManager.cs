@@ -1,9 +1,9 @@
-using NineChronicles.MOD.Ares.UI;
+using NineChronicles.Mod.Ares.UI;
 using UnityEngine;
 using UnityEngine.UIElements;
 using Debug = UnityEngine.Debug;
 
-namespace NineChronicles.MOD.Ares
+namespace NineChronicles.Mod.Ares
 {
     public class UIManager : MonoBehaviour
     {

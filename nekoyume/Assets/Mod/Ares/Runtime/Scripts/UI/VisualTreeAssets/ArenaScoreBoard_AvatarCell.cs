@@ -3,7 +3,7 @@ using Cysharp.Threading.Tasks;
 using Nekoyume.UI.Model;
 using UnityEngine.UIElements;
 
-namespace NineChronicles.MOD.Ares.UI.VisualTreeAssets
+namespace NineChronicles.Mod.Ares.UI.VisualTreeAssets
 {
     public class ArenaScoreBoard_AvatarCell
     {

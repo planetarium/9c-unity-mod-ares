@@ -1,7 +1,7 @@
-using NineChronicles.MOD.Core;
+using NineChronicles.Mod.Core;
 using UnityEngine;
 
-namespace NineChronicles.MOD.Ares
+namespace NineChronicles.Mod.Ares
 {
     [Mod(
         name: "Ares",

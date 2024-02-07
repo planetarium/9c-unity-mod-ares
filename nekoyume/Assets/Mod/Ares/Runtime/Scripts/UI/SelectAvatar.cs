@@ -2,7 +2,7 @@ using Libplanet.Crypto;
 using Nekoyume;
 using UnityEngine.UIElements;
 
-namespace NineChronicles.MOD.Ares.UI
+namespace NineChronicles.Mod.Ares.UI
 {
     public class SelectAvatar : IUI
     {

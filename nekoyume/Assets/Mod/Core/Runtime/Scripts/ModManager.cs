@@ -5,7 +5,7 @@ using System.Linq;
 using UnityEngine;
 using Debug = UnityEngine.Debug;
 
-namespace NineChronicles.MOD.Core
+namespace NineChronicles.Mod.Core
 {
     public class ModManager : MonoBehaviour
     {

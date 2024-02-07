@@ -14,7 +14,7 @@ using Nekoyume.TableData;
 using Debug = UnityEngine.Debug;
 using static Nekoyume.Model.BattleStatus.Arena.ArenaLog;
 
-namespace NineChronicles.MOD.Ares
+namespace NineChronicles.Mod.Ares
 {
     public static class ArenaCalculator
     {

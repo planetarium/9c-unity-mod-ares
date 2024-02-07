@@ -13,12 +13,12 @@ using Nekoyume.State;
 using Nekoyume.TableData;
 using Nekoyume.UI;
 using Nekoyume.UI.Model;
-using NineChronicles.MOD.Ares.UI;
-using NineChronicles.MOD.Core.Extensions;
+using NineChronicles.Mod.Ares.UI;
+using NineChronicles.Mod.Core.Extensions;
 using UnityEngine;
 using Debug = UnityEngine.Debug;
 
-namespace NineChronicles.MOD.Ares
+namespace NineChronicles.Mod.Ares
 {
     public class AresContext
     {

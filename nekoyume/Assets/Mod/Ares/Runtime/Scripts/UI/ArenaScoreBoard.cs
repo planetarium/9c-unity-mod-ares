@@ -1,8 +1,8 @@
-using NineChronicles.MOD.Ares.UI.VisualTreeAssets;
+using NineChronicles.Mod.Ares.UI.VisualTreeAssets;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-namespace NineChronicles.MOD.Ares.UI
+namespace NineChronicles.Mod.Ares.UI
 {
     public class ArenaScoreBoard : IUI
     {

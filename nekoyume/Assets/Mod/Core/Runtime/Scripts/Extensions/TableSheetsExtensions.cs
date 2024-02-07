@@ -7,7 +7,7 @@ using Nekoyume;
 using Nekoyume.Game;
 using Nekoyume.TableData;
 
-namespace NineChronicles.MOD.Core.Extensions
+namespace NineChronicles.Mod.Core.Extensions
 {
     public static class TableSheetsExtensions
     {

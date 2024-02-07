@@ -1,4 +1,4 @@
-namespace NineChronicles.MOD.Ares.UI
+namespace NineChronicles.Mod.Ares.UI
 {
     public interface IUI
     {
