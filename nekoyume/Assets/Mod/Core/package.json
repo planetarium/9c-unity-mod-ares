@@ -1,6 +1,6 @@
 {
   "name": "com.planetariumlabs.9c-unity-mod-core",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "displayName": "NineChronicles Mod Core",
   "description": "This is a mod project used by the Unity client for Nine Chronicles.",
   "unity": "2021.3",

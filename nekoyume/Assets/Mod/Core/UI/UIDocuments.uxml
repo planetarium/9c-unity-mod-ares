@@ -1,0 +1,7 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" MemoryProfiler="Unity.MemoryProfiler.Editor" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/Mod/Core/UI/ModStyleSheet.uss?fileID=7433441132597879392&amp;guid=e69f607d98de04419987ba3a3ff13d4c&amp;type=3#ModStyleSheet" />
+    <ui:VisualElement name="mod-container" class="mod-container">
+        <ui:Button text="X" display-tooltip-when-elided="true" name="x-button" style="width: 40px; height: 40px; margin-left: 2px; margin-right: 2px; margin-top: 2px; margin-bottom: 2px; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; -unity-font-style: bold; font-size: 24px; background-color: rgb(222, 78, 49);" />
+        <ui:ListView focusable="true" name="mod-items" selection-type="None" fixed-item-height="80" style="flex-grow: 1;" />
+    </ui:VisualElement>
+</ui:UXML>

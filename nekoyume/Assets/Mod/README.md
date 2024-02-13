@@ -46,8 +46,8 @@ Add the mod packages to your NineChronicles project's manifest.json file as show
 ```json
 {
   "dependencies": {
-    "com.planetariumlabs.9c-unity-mod-ares": "https://github.com/planetarium/9c-unity-mod-ares.git?path=/nekoyume/Assets/Mod/Ares#develop-mod",
-    "com.planetariumlabs.9c-unity-mod-core": "https://github.com/planetarium/9c-unity-mod-ares.git?path=/nekoyume/Assets/Mod/Core#develop-mod"
+    "com.planetariumlabs.9c-unity-mod-ares": "https://github.com/planetarium/9c-unity-mod-ares.git?path=/nekoyume/Assets/Mod/Ares#main-mod",
+    "com.planetariumlabs.9c-unity-mod-core": "https://github.com/planetarium/9c-unity-mod-ares.git?path=/nekoyume/Assets/Mod/Core#main-mod"
   }
 }
 ```
