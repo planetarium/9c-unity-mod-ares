@@ -29,7 +29,7 @@ namespace NineChronicles.Mod.Core.UI.VisualTreeAssets
 
         public void SetData(ModInfo data, int dataIndex)
         {
-            _name.text = data.Attribute.Name;
+            _name.text = $"{data.Attribute.Name} <size=12>({data.Attribute.Version})</size>";
             _description.text = data.Attribute.Description;
             _showButton.SetEnabled(data.Mod.CheckCondition);
             _modelIndex = dataIndex;
