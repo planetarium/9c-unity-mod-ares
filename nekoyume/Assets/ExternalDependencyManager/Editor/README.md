@@ -454,7 +454,7 @@ In order to modify the generated Podfile you can create a script like this:
 ```
 using System.IO;
 public class PostProcessIOS : MonoBehaviour {
-[PostProcessBuildAttribute(45)]//must be between 40 and 50 to ensure that it's not overriden by Podfile generation (40) and that it's added before "pod install" (50)
+[PostProcessBuildAttribute(45)]//must be between 40 and 50 to ensure that it's not overridden by Podfile generation (40) and that it's added before "pod install" (50)
 private static void PostProcessBuild_iOS(BuildTarget target, string buildPath)
 {
     if (target == BuildTarget.iOS)
